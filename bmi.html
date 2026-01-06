@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BMI Calculator | Gym Fit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/bmi.css" />
+  </head>
+  <body>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">GYM FIT</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../programs.html">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../trainers.html">Trainers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">BMI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../membership.html"
+                >Membership</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== BMI Section ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow">
+              <div class="card-body">
+                <h3 class="text-center fw-bold mb-4">BMI Calculator</h3>
+
+                <div class="mb-3">
+                  <label class="form-label">Height (cm)</label>
+                  <input
+                    type="number"
+                    id="height"
+                    class="form-control"
+                    placeholder="Enter height"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Weight (kg)</label>
+                  <input
+                    type="number"
+                    id="weight"
+                    class="form-control"
+                    placeholder="Enter weight"
+                  />
+                </div>
+
+                <button class="btn btn-danger w-100" onclick="calculateBMI()">
+                  Calculate BMI
+                </button>
+
+                <div id="result" class="text-center mt-4 fw-bold"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">© 2026 Gym Fit | All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+      function calculateBMI() {
+        const height = document.getElementById("height").value;
+        const weight = document.getElementById("weight").value;
+        const result = document.getElementById("result");
+
+        if (height === "" || weight === "") {
+          result.innerHTML = "Please enter height and weight";
+          result.style.color = "red";
+          return;
+        }
+
+        const heightInMeter = height / 100;
+        const bmi = (weight / (heightInMeter * heightInMeter)).toFixed(2);
+
+        let message = "";
+        let color = "";
+
+        if (bmi < 18.5) {
+          message = "Underweight";
+          color = "orange";
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+          message = "Normal weight";
+          color = "green";
+        } else if (bmi >= 25 && bmi < 29.9) {
+          message = "Overweight";
+          color = "darkorange";
+        } else {
+          message = "Obese";
+          color = "red";
+        }
+
+        result.innerHTML = `Your BMI is <b>${bmi}</b> (${message})`;
+        result.style.color = color;
+      }
+    </script>
+  </body>
+</html>
