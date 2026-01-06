@@ -11,83 +11,274 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/athletes.css" />
   </head>
   <body>
     <!-- ===== Navbar ===== -->
-     <div id="header"></div>
+    <div id="header"></div>
 
-    <!-- ===== Page Header ===== -->
-    <section class="py-5 text-center bg-light">
+    <!-- ===== Hero Section ===== -->
+    <section class="hero-section">
       <div class="container">
-        <h1 class="fw-bold">Athletes Trainers</h1>
-        <p class="text-muted">
-          Specialized trainers for professional and competitive athletes
+        <h1 class="hero-title">ELITE ATHLETES TRAINERS</h1>
+        <p class="hero-subtitle">
+          World-class specialized trainers for professional athletes, Olympians,
+          and competitive sports professionals. Transform your performance with
+          elite coaching.
         </p>
+        <a href="#trainers" class="btn btn-primary btn-lg px-4">
+          <i class="fas fa-users me-2"></i>Meet Our Trainers
+        </a>
       </div>
     </section>
 
-    <!-- ===== Athletes Trainers Section ===== -->
-    <section class="py-5">
+    <!-- ===== Stats Section ===== -->
+    <section class="stats-section">
       <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>15+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat-item">
+            <h3>200+</h3>
+            <p>Professional Athletes Trained</p>
+          </div>
+          <div class="stat-item">
+            <h3>50+</h3>
+            <p>National Championships</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Satisfaction Rate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Trainers Section ===== -->
+    <section id="trainers" class="trainers-section">
+      <div class="container">
+        <h2 class="section-title">Meet Our Elite Trainers</h2>
+        <p class="text-center text-muted mb-5">
+          Each trainer is a specialist in their field with proven track records
+          of developing champion athletes
+        </p>
+
         <div class="row g-4">
           <!-- Trainer 1 -->
-          <div class="col-md-4">
-            <div class="card text-center shadow h-100">
-              <img
-                src="../images/athlete-trainer1.jpg"
-                class="card-img-top"
-                alt="Athlete Trainer"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Rohit Mehta</h5>
-                <p class="card-text">Strength & Conditioning Coach</p>
-                <ul class="list-unstyled">
-                  <li>🏆 National Level Athletes</li>
-                  <li>⚡ Speed & Power Training</li>
-                  <li>🎯 Injury Prevention</li>
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/trainner.jpg"
+                  class="trainer-img"
+                  alt="Rohit Mehta"
+                />
+                <span class="trainer-badge">PRO ATHLETE</span>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Rohit Mehta</h3>
+                <p class="trainer-specialty">Strength & Conditioning Coach</p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-1"></i>12 Years Experience
+                </span>
+                <ul class="trainer-skills">
+                  <li>🏆 National Level Athletes Specialist</li>
+                  <li>⚡ Speed & Power Development</li>
+                  <li>🎯 Sports-Specific Training</li>
+                  <li>🛡️ Injury Prevention Programs</li>
+                  <li>📊 Performance Analytics</li>
                 </ul>
+                <button
+                  class="btn-trainer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#trainerModal1"
+                >
+                  <i class="fas fa-user-plus me-2"></i>Book Consultation
+                </button>
               </div>
             </div>
           </div>
 
           <!-- Trainer 2 -->
-          <div class="col-md-4">
-            <div class="card text-center shadow h-100">
-              <img
-                src="../images/athlete-trainer2.jpg"
-                class="card-img-top"
-                alt="Athlete Trainer"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Arjun Singh</h5>
-                <p class="card-text">Sports Performance Trainer</p>
-                <ul class="list-unstyled">
-                  <li>🏃 Endurance Training</li>
-                  <li>🥗 Sports Nutrition Guidance</li>
-                  <li>🧠 Mental Conditioning</li>
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/cardio/1.jpg"
+                  class="trainer-img"
+                  alt="Arjun Singh"
+                />
+                <span class="trainer-badge">PERFORMANCE EXPERT</span>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Arjun Singh</h3>
+                <p class="trainer-specialty">Sports Performance Trainer</p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-1"></i>10 Years Experience
+                </span>
+                <ul class="trainer-skills">
+                  <li>🏃‍♂️ Endurance & Stamina Training</li>
+                  <li>🥗 Advanced Sports Nutrition</li>
+                  <li>🧠 Mental Conditioning & Focus</li>
+                  <li>⚡ Explosive Power Development</li>
+                  <li>🔄 Periodization Planning</li>
                 </ul>
+                <button
+                  class="btn-trainer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#trainerModal2"
+                >
+                  <i class="fas fa-user-plus me-2"></i>Book Consultation
+                </button>
               </div>
             </div>
           </div>
 
           <!-- Trainer 3 -->
-          <div class="col-md-4">
-            <div class="card text-center shadow h-100">
-              <img
-                src="../images/athlete-trainer3.jpg"
-                class="card-img-top"
-                alt="Athlete Trainer"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Kavita Rao</h5>
-                <p class="card-text">Professional Athletic Coach</p>
-                <ul class="list-unstyled">
-                  <li>🤸 Mobility & Flexibility</li>
-                  <li>🏋️ Strength Training</li>
-                  <li>🩺 Recovery Programs</li>
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/cardio/2.jpg"
+                  class="trainer-img"
+                  alt="Kavita Rao"
+                />
+                <span class="trainer-badge">ELITE COACH</span>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Kavita Rao</h3>
+                <p class="trainer-specialty">Professional Athletic Coach</p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-1"></i>15 Years Experience
+                </span>
+                <ul class="trainer-skills">
+                  <li>🤸‍♀️ Mobility & Flexibility Expert</li>
+                  <li>🏋️‍♀️ Olympic Weightlifting Coach</li>
+                  <li>🩺 Recovery & Regeneration</li>
+                  <li>📈 Performance Benchmarking</li>
+                  <li>🎯 Competition Preparation</li>
                 </ul>
+                <button
+                  class="btn-trainer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#trainerModal3"
+                >
+                  <i class="fas fa-user-plus me-2"></i>Book Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/cardio/3.jpg"
+                  class="trainer-img"
+                  alt="Rajesh Verma"
+                />
+                <span class="trainer-badge">REHAB SPECIALIST</span>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Rajesh Verma</h3>
+                <p class="trainer-specialty">Athletic Rehabilitation Coach</p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-1"></i>8 Years Experience
+                </span>
+                <ul class="trainer-skills">
+                  <li>🩺 Post-Injury Rehabilitation</li>
+                  <li>🔄 Functional Movement Training</li>
+                  <li>⚕️ Sports Physiotherapy</li>
+                  <li>🛡️ Preventive Care Programs</li>
+                  <li>🧘‍♂️ Yoga for Athletes</li>
+                </ul>
+                <button
+                  class="btn-trainer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#trainerModal4"
+                >
+                  <i class="fas fa-user-plus me-2"></i>Book Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/cardio/4.jpg"
+                  class="trainer-img"
+                  alt="Priya Sharma"
+                />
+                <span class="trainer-badge">NUTRITION EXPERT</span>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Priya Sharma</h3>
+                <p class="trainer-specialty">Sports Nutritionist</p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-1"></i>7 Years Experience
+                </span>
+                <ul class="trainer-skills">
+                  <li>🥗 Performance Nutrition Plans</li>
+                  <li>⚡ Supplement Guidance</li>
+                  <li>⚖️ Weight Management</li>
+                  <li>💧 Hydration Strategies</li>
+                  <li>📊 Body Composition Analysis</li>
+                </ul>
+                <button
+                  class="btn-trainer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#trainerModal5"
+                >
+                  <i class="fas fa-user-plus me-2"></i>Book Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/cardio/5.jpg"
+                  class="trainer-img"
+                  alt="Amit Patel"
+                />
+                <span class="trainer-badge">TECHNOLOGY COACH</span>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Amit Patel</h3>
+                <p class="trainer-specialty">High-Tech Performance Analyst</p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-1"></i>6 Years Experience
+                </span>
+                <ul class="trainer-skills">
+                  <li>📱 Wearable Technology Expert</li>
+                  <li>📊 Biomechanics Analysis</li>
+                  <li>🎯 Motion Tracking</li>
+                  <li>⚡ Performance Metrics</li>
+                  <li>📈 Data-Driven Training</li>
+                </ul>
+                <button
+                  class="btn-trainer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#trainerModal6"
+                >
+                  <i class="fas fa-user-plus me-2"></i>Book Consultation
+                </button>
               </div>
             </div>
           </div>
@@ -95,18 +286,329 @@
       </div>
     </section>
 
-    <!-- ===== Footer ===== -->
-     <div id="footer"></div>
+    <!-- ===== Specializations Section ===== -->
+    <section class="specializations-section">
+      <div class="container">
+        <h2 class="section-title">Our Specializations</h2>
+        <p class="text-center text-muted mb-5">
+          Comprehensive training programs tailored for different athletic
+          disciplines
+        </p>
 
-    <!-- For header footer -->
+        <div class="specialization-grid">
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-running"></i>
+            </div>
+            <h4>Track & Field</h4>
+            <p>
+              Specialized training for sprinters, jumpers, and throwers with
+              focus on explosive power.
+            </p>
+          </div>
+
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-dumbbell"></i>
+            </div>
+            <h4>Strength Sports</h4>
+            <p>
+              Powerlifting, weightlifting, and strongman training with proper
+              technique focus.
+            </p>
+          </div>
+
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-futbol"></i>
+            </div>
+            <h4>Team Sports</h4>
+            <p>
+              Football, basketball, cricket and other team sport specific
+              conditioning.
+            </p>
+          </div>
+
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-swimmer"></i>
+            </div>
+            <h4>Water Sports</h4>
+            <p>
+              Swimming, rowing, and water polo athletes with focus on endurance
+              and technique.
+            </p>
+          </div>
+
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-biking"></i>
+            </div>
+            <h4>Endurance Sports</h4>
+            <p>
+              Marathon, triathlon, and cycling training programs for peak
+              endurance.
+            </p>
+          </div>
+
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h4>Combat Sports</h4>
+            <p>
+              Boxing, MMA, wrestling training with focus on strength, speed and
+              agility.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA Section ===== -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">
+          Ready to Take Your Performance to Elite Level?
+        </h2>
+        <p class="cta-text">
+          Join our elite athlete program and get personalized training from
+          world-class coaches. Limited slots available for serious athletes.
+        </p>
+        <button
+          class="btn-cta"
+          data-bs-toggle="modal"
+          data-bs-target="#enquiryModal"
+        >
+          <i class="fas fa-calendar-check me-2"></i>Schedule Assessment
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <div id="footer"></div>
+
+    <!-- ===== Trainer Modals ===== -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="trainerModal1" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Book Consultation with Rohit Mehta</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img
+                  src="../assets/trainner.jpg"
+                  class="trainer-modal-img"
+                  alt="Rohit Mehta"
+                />
+              </div>
+              <div class="col-md-6">
+                <h5>Specialization: Strength & Conditioning</h5>
+                <p>
+                  <strong>Experience:</strong> 12+ years training national
+                  athletes
+                </p>
+                <p><strong>Hourly Rate:</strong> ₹5,000</p>
+                <p><strong>Availability:</strong> Mon-Fri, 6 AM - 8 PM</p>
+                <div class="mb-3">
+                  <label class="form-label">Select Date</label>
+                  <input type="date" class="form-control" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Select Time</label>
+                  <select class="form-select">
+                    <option>6:00 AM - 7:00 AM</option>
+                    <option>7:00 AM - 8:00 AM</option>
+                    <option>5:00 PM - 6:00 PM</option>
+                    <option>6:00 PM - 7:00 PM</option>
+                    <option>7:00 PM - 8:00 PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">
+              Confirm Booking
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="trainerModal2" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Book Consultation with Arjun Singh</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img
+                  src="../assets/cardio/1.jpg"
+                  class="trainer-modal-img"
+                  alt="Arjun Singh"
+                />
+              </div>
+              <div class="col-md-6">
+                <h5>Specialization: Sports Performance</h5>
+                <p>
+                  <strong>Experience:</strong> 10+ years in performance training
+                </p>
+                <p><strong>Hourly Rate:</strong> ₹4,500</p>
+                <p><strong>Availability:</strong> Mon-Sat, 7 AM - 9 PM</p>
+                <div class="mb-3">
+                  <label class="form-label">Select Date</label>
+                  <input type="date" class="form-control" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Select Time</label>
+                  <select class="form-select">
+                    <option>7:00 AM - 8:00 AM</option>
+                    <option>8:00 AM - 9:00 AM</option>
+                    <option>6:00 PM - 7:00 PM</option>
+                    <option>7:00 PM - 8:00 PM</option>
+                    <option>8:00 PM - 9:00 PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">
+              Confirm Booking
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enquiry Modal -->
+    <div class="modal fade" id="enquiryModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Athlete Assessment Request</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="enquiryForm">
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Sport</label>
+                <select class="form-select" required>
+                  <option value="">Select your sport</option>
+                  <option>Athletics</option>
+                  <option>Football</option>
+                  <option>Cricket</option>
+                  <option>Basketball</option>
+                  <option>Swimming</option>
+                  <option>Weightlifting</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Training Goals</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Describe your athletic goals..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Submit Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
     <script>
+      // Load header and footer
       fetch("../includes/header.html")
         .then((res) => res.text())
-        .then((data) => (document.getElementById("header").innerHTML = data));
+        .then((data) => (document.getElementById("header").innerHTML = data))
+        .catch(() => console.log("Header not found"));
 
       fetch("../includes/footer.html")
         .then((res) => res.text())
-        .then((data) => (document.getElementById("footer").innerHTML = data));
+        .then((data) => (document.getElementById("footer").innerHTML = data))
+        .catch(() => console.log("Footer not found"));
+
+      // Form submission handler
+      document
+        .getElementById("enquiryForm")
+        ?.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert(
+            "Thank you for your enquiry! Our team will contact you within 24 hours."
+          );
+          const modal = bootstrap.Modal.getInstance(
+            document.getElementById("enquiryModal")
+          );
+          modal.hide();
+        });
+
+      // Booking confirmation
+      document
+        .querySelectorAll('.btn-primary[type="button"]')
+        .forEach((button) => {
+          if (button.textContent.includes("Confirm Booking")) {
+            button.addEventListener("click", function () {
+              alert(
+                "Booking confirmed! You will receive a confirmation email shortly."
+              );
+              const modal = bootstrap.Modal.getInstance(this.closest(".modal"));
+              modal.hide();
+            });
+          }
+        });
     </script>
 
     <!-- Bootstrap JS -->
