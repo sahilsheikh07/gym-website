@@ -1,0 +1,8 @@
+.card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card ul {
+  padding-left: 18px;
+}
