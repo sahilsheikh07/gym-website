@@ -7,3 +7,22 @@
 body {
   padding-top: 70px;
 }
+
+.hero-slide {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-slide .container {
+  position: relative;
+  z-index: 2;
+}
