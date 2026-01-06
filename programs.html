@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Programs | Gym Fit</title>
+    <title>Programs | Oxygen Gym</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
@@ -11,14 +11,22 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/programs.css" />
   </head>
   <body>
     <!-- ===== Navbar ===== -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="../index.html">GYM FIT</a>
+        <a class="navbar-brand" href="../index.html">
+          <i class="fas fa-dumbbell me-2"></i>OXYGEN GYM
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -40,10 +48,10 @@
               <a class="nav-link" href="../trainers.html">Trainers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../athletes.html">Athletes Trainers</a>
+              <a class="nav-link" href="../athletes.html">Athletes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../bmi.html">BMI</a>
+              <a class="nav-link" href="../bmi.html">BMI Calculator</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../membership.html">Membership</a>
@@ -57,139 +65,174 @@
     </nav>
 
     <!-- ===== Page Header ===== -->
-    <section class="py-5 text-center bg-light">
+    <section class="page-header text-center">
       <div class="container">
         <h1 class="fw-bold">Our Fitness Programs</h1>
-        <p class="text-muted">
-          Choose the program that suits your fitness goal
+        <p class="lead">
+          Transform your body and mind with our professionally designed fitness
+          programs. Whether you're a beginner or an advanced athlete, we have
+          the perfect plan for you.
         </p>
       </div>
     </section>
 
     <!-- ===== Programs Section ===== -->
-    <section class="py-5">
+    <section class="programs-section">
       <div class="container">
-        <div class="row g-4">
-          <!-- Program 1 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow">
-              <img
-                src="../images/weight-training.jpg"
-                class="card-img-top"
-                alt="Weight Training"
-              />
+        <h2 class="section-title">Choose Your Program</h2>
+
+        <div class="category-filter mb-5">
+          <button class="filter-btn active" data-filter="all">
+            All Programs
+          </button>
+          <button class="filter-btn" data-filter="strength">Strength</button>
+          <button class="filter-btn" data-filter="cardio">Cardio</button>
+          <button class="filter-btn" data-filter="mind">Mind & Body</button>
+          <button class="filter-btn" data-filter="group">Group Classes</button>
+        </div>
+
+        <div class="row g-4" id="programs-container">
+          <!-- Program 1 - Weight Training -->
+          <div class="col-lg-4 col-md-6" data-category="strength">
+            <div class="program-card">
+              <div class="card-img-container">
+                <img src="../assets/dumbels.jpg" alt="Weight Training" />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">Weight Training</h5>
                 <p class="card-text">
-                  Strength training program to build muscles and increase power.
+                  Build strength and muscle mass with our structured weight
+                  training program. Perfect for both beginners and experienced
+                  lifters.
                 </p>
-                <ul>
-                  <li>Muscle gain</li>
+                <ul class="program-features">
+                  <li>Muscle gain & definition</li>
                   <li>Strength improvement</li>
-                  <li>Fat loss</li>
+                  <li>Personalized workout plans</li>
+                  <li>Proper form guidance</li>
                 </ul>
+                <div class="program-price">$89/month</div>
+                <button class="btn-program">Choose This Program</button>
               </div>
             </div>
           </div>
 
-          <!-- Program 2 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow">
-              <img
-                src="../images/cardio.jpg"
-                class="card-img-top"
-                alt="Cardio"
-              />
+          <!-- Program 2 - Cardio Training -->
+          <div class="col-lg-4 col-md-6" data-category="cardio">
+            <div class="program-card">
+              <div class="card-img-container">
+                <img src="../assets/gym-run.jpg" alt="Cardio Training" />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">Cardio Training</h5>
                 <p class="card-text">
-                  Improve heart health and burn calories with cardio workouts.
+                  Improve heart health, burn calories, and increase stamina with
+                  our dynamic cardio training sessions.
                 </p>
-                <ul>
-                  <li>Weight loss</li>
-                  <li>Increase stamina</li>
-                  <li>Heart health</li>
+                <ul class="program-features">
+                  <li>Weight loss & fat burning</li>
+                  <li>Increase stamina & endurance</li>
+                  <li>Heart health improvement</li>
+                  <li>Variety of cardio equipment</li>
                 </ul>
+                <div class="program-price">$69/month</div>
+                <button class="btn-program">Choose This Program</button>
               </div>
             </div>
           </div>
 
-          <!-- Program 3 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow">
-              <img src="../images/yoga.jpg" class="card-img-top" alt="Yoga" />
+          <!-- Program 3 - Yoga & Meditation -->
+          <div class="col-lg-4 col-md-6" data-category="mind">
+            <div class="program-card">
+              <div class="card-img-container">
+                <img src="../assets/cardio/5.jpg" alt="Yoga & Meditation" />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">Yoga & Meditation</h5>
                 <p class="card-text">
-                  Improve flexibility, focus and reduce stress.
+                  Improve flexibility, reduce stress, and find mental peace with
+                  our yoga and meditation classes.
                 </p>
-                <ul>
-                  <li>Stress relief</li>
-                  <li>Flexibility</li>
-                  <li>Mental peace</li>
+                <ul class="program-features">
+                  <li>Stress relief & relaxation</li>
+                  <li>Flexibility improvement</li>
+                  <li>Mental peace & focus</li>
+                  <li>Breathing techniques</li>
                 </ul>
+                <div class="program-price">$75/month</div>
+                <button class="btn-program">Choose This Program</button>
               </div>
             </div>
           </div>
 
-          <!-- Program 4 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow">
-              <img
-                src="../images/crossfit.jpg"
-                class="card-img-top"
-                alt="CrossFit"
-              />
+          <!-- Program 4 - CrossFit -->
+          <div class="col-lg-4 col-md-6" data-category="strength group">
+            <div class="program-card">
+              <div class="card-img-container">
+                <img src="../assets/cardio/3.jpg" alt="CrossFit" />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">CrossFit</h5>
                 <p class="card-text">
-                  High intensity functional training for overall fitness.
+                  High-intensity functional training for overall fitness. Push
+                  your limits with our challenging CrossFit workouts.
                 </p>
-                <ul>
-                  <li>Full body workout</li>
+                <ul class="program-features">
+                  <li>Full body functional workout</li>
                   <li>High calorie burn</li>
-                  <li>Endurance</li>
+                  <li>Endurance & strength building</li>
+                  <li>Community atmosphere</li>
                 </ul>
+                <div class="program-price">$99/month</div>
+                <button class="btn-program">Choose This Program</button>
               </div>
             </div>
           </div>
 
-          <!-- Program 5 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow">
-              <img src="../images/zumba.jpg" class="card-img-top" alt="Zumba" />
+          <!-- Program 5 - Zumba -->
+          <div class="col-lg-4 col-md-6" data-category="cardio group">
+            <div class="program-card">
+              <div class="card-img-container">
+                <img src="../assets/cardio/2.jpg" alt="Zumba" />
+              </div>
               <div class="card-body">
-                <h5 class="card-title">Zumba</h5>
+                <h5 class="card-title">Zumba Fitness</h5>
                 <p class="card-text">
-                  Fun dance-based fitness program for weight loss.
+                  Fun dance-based fitness program that makes exercise enjoyable.
+                  Perfect for weight loss and energy boost.
                 </p>
-                <ul>
-                  <li>Weight loss</li>
-                  <li>Fun workouts</li>
-                  <li>Energy boost</li>
+                <ul class="program-features">
+                  <li>Fun & energetic workouts</li>
+                  <li>Weight loss & toning</li>
+                  <li>Dance-based cardio</li>
+                  <li>All fitness levels welcome</li>
                 </ul>
+                <div class="program-price">$65/month</div>
+                <button class="btn-program">Choose This Program</button>
               </div>
             </div>
           </div>
 
-          <!-- Program 6 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow">
-              <img
-                src="../images/personal-training.jpg"
-                class="card-img-top"
-                alt="Personal Training"
-              />
+          <!-- Program 6 - Personal Training -->
+          <div class="col-lg-4 col-md-6" data-category="strength cardio">
+            <div class="program-card">
+              <div class="card-img-container">
+                <img src="../assets/trainner.jpg" alt="Personal Training" />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">Personal Training</h5>
                 <p class="card-text">
-                  One-on-one training with customized workout plans.
+                  One-on-one training with customized workout plans tailored to
+                  your specific goals and fitness level.
                 </p>
-                <ul>
-                  <li>Personal guidance</li>
-                  <li>Custom workout</li>
-                  <li>Fast results</li>
+                <ul class="program-features">
+                  <li>Personal guidance & motivation</li>
+                  <li>Custom workout & nutrition plan</li>
+                  <li>Fast & effective results</li>
+                  <li>Flexible scheduling</li>
                 </ul>
+                <div class="program-price">$120/month</div>
+                <button class="btn-program">Choose This Program</button>
               </div>
             </div>
           </div>
@@ -197,12 +240,175 @@
       </div>
     </section>
 
+    <!-- ===== Testimonial Section ===== -->
+    <section class="testimonial-section">
+      <div class="container">
+        <h2 class="section-title text-white">What Our Members Say</h2>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="testimonial-text">
+                "The weight training program completely transformed my body. I
+                gained 10 lbs of muscle in just 3 months!"
+              </div>
+              <div class="client-name">Michael Rodriguez</div>
+              <div class="client-program">Weight Training Program</div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="testimonial-text">
+                "Zumba classes are so much fun! I don't even feel like I'm
+                working out, but I've lost 15 pounds already."
+              </div>
+              <div class="client-name">Sarah Johnson</div>
+              <div class="client-program">Zumba Fitness Program</div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="testimonial-text">
+                "The personal training program gave me the accountability I
+                needed. My trainer customized everything for my goals."
+              </div>
+              <div class="client-name">David Chen</div>
+              <div class="client-program">Personal Training Program</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Footer ===== -->
-    <footer class="bg-dark text-white text-center py-3">
-      <p class="mb-0">© 2026 Gym Fit | All Rights Reserved</p>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="footer-logo">OXYGEN GYM</div>
+            <p>
+              Transform your life through fitness. Our state-of-the-art facility
+              and expert trainers will help you achieve your fitness goals.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <div class="footer-links">
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="../trainers.html">Trainers</a></li>
+                <li><a href="../membership.html">Membership</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="footer-links">
+              <h5>Our Programs</h5>
+              <ul>
+                <li><a href="#">Weight Training</a></li>
+                <li><a href="#">Cardio Training</a></li>
+                <li><a href="#">Yoga & Meditation</a></li>
+                <li><a href="#">CrossFit</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="footer-links">
+              <h5>Contact Us</h5>
+              <ul>
+                <li>
+                  <i class="fas fa-map-marker-alt me-2"></i> 123 Fitness St,
+                  City
+                </li>
+                <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                <li><i class="fas fa-envelope me-2"></i> info@gymfit.com</li>
+                <li><i class="fas fa-clock me-2"></i> Mon-Sun: 5am - 11pm</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p class="mb-0">
+            © 2026 Oxygen Gym | All Rights Reserved | Designed with
+            <i class="fas fa-heart text-danger"></i> for fitness enthusiasts
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript for Program Filtering -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Program filtering functionality
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const programCards = document.querySelectorAll(".program-card");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+
+            // Show/hide cards based on filter
+            programCards.forEach((card) => {
+              const cardCategory =
+                card.parentElement.getAttribute("data-category");
+
+              if (filterValue === "all" || cardCategory.includes(filterValue)) {
+                card.parentElement.style.display = "block";
+              } else {
+                card.parentElement.style.display = "none";
+              }
+            });
+          });
+        });
+
+        // Program selection button functionality
+        const programButtons = document.querySelectorAll(".btn-program");
+        programButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const programName =
+              this.closest(".card-body").querySelector(
+                ".card-title"
+              ).textContent;
+            alert(
+              `Thank you for selecting "${programName}"! Our team will contact you shortly to get you started.`
+            );
+          });
+        });
+
+        // Add hover effect to cards
+        const cards = document.querySelectorAll(".program-card");
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-15px)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
+          });
+        });
+      });
+    </script>
   </body>
 </html>
