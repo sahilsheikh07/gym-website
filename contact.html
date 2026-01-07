@@ -13,60 +13,85 @@
   <link rel="stylesheet" href="../css/contact.css" />
 </head>
 
-<body>
+<body style="color: #000000;">
   <!-- ===== Navbar ===== -->
   <div id="header"></div>
 
   <!-- ===== Contact Section ===== -->
-  <section class="py-5 bg-light">
+  <section class="contact-hero">
+    <div class="overlay"></div>
+    <div class="container text-center hero-content">
+      <h1>Contact Us</h1>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
     <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Contact Us</h2>
-        <p class="text-muted">Get in touch with us</p>
-      </div>
+      <div class="row g-5">
 
-      <div class="row">
-        <!-- Contact Info -->
-        <div class="col-md-5 mb-4">
-          <h5>Gym Fit</h5>
-          <p>📍 Address: Main Road, Fitness City</p>
-          <p>📞 Phone: +91 98765 43210</p>
-          <p>✉ Email: info@gymfit.com</p>
-          <p>🕒 Timings: 6:00 AM – 10:00 PM</p>
-        </div>
+        <!-- LEFT INFO -->
+        <div class="col-lg-6">
+          <div class="locations">
 
-        <!-- Contact Form -->
-        <div class="col-md-7">
-          <div class="card shadow">
-            <div class="card-body">
-              <h5 class="mb-4">Send Message</h5>
-
-              <form onsubmit="return validateForm()">
-                <div class="mb-3">
-                  <label class="form-label">Full Name</label>
-                  <input type="text" id="name" class="form-control" placeholder="Enter your name" />
-                </div>
-
-                <div class="mb-3">
-                  <label class="form-label">Email</label>
-                  <input type="email" id="email" class="form-control" placeholder="Enter your email" />
-                </div>
-
-                <div class="mb-3">
-                  <label class="form-label">Message</label>
-                  <textarea id="message" class="form-control" rows="4" placeholder="Your message"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-danger w-100">
-                  Send Message
-                </button>
-              </form>
-
-              <div id="formMsg" class="text-center mt-3 fw-bold"></div>
+            <div class="location">
+              <h5>New York</h5>
+              <p>350 5th Ave, New York, NY 10118</p>
+              <p>(212) 555-0134</p>
+              <p>nyc@powerflow.com</p>
             </div>
+
+            <div class="location">
+              <h5>Los Angeles</h5>
+              <p>742 S Hill St, Los Angeles, CA 90014</p>
+              <p>(212) 555-0134</p>
+              <p>nyc@powerflow.com</p>
+            </div>
+
+            <div class="location">
+              <h5>Chicago</h5>
+              <p>350 5th Ave, New York, NY 10118</p>
+              <p>(212) 555-0134</p>
+              <p>nyc@powerflow.com</p>
+            </div>
+
+            <div class="location">
+              <h5>Houston</h5>
+              <p>350 5th Ave, New York, NY 10118</p>
+              <p>(212) 555-0134</p>
+              <p>nyc@powerflow.com</p>
+            </div>
+
           </div>
         </div>
+
+        <!-- RIGHT FORM -->
+        <div class="col-lg-6">
+          <div class="contact-form">
+            <p class="form-text">
+              Have a question, suggestion, or just want to say hi?
+              We’re here and happy to hear from you!
+            </p>
+
+            <form>
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Your Email" required>
+              <input type="text" placeholder="Your Phone">
+              <textarea placeholder="Your Message"></textarea>
+              <button type="submit">SEND MESSAGE</button>
+            </form>
+          </div>
+        </div>
+
       </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <h3>Ready to take the first step towards your fitness goals?</h3>
+      <a href="/membership.html" class="cta-btn">JOIN NOW</a>
     </div>
   </section>
 
