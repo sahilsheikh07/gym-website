@@ -9,21 +9,25 @@ body {
 }
 
 .hero-slide {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
   position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
-
-.hero-slide::before {
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+.hero-slide::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.hero-slide .container {
-  position: relative;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
   z-index: 2;
 }
 
