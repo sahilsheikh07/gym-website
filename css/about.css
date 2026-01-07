@@ -12,13 +12,13 @@ a {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(167, 161, 161, 0.9)),
-    url("https://images.unsplash.com/photo-1554284126-aa88f22d8b74") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(167, 161, 161, 0.9)),
+    url("https://images.unsplash.com/photo-1554284126-aa88f22d8b74")
+      center/cover no-repeat;
   padding: 120px 0;
   text-align: center;
   height: 350px;
 }
-
 
 .hero h1 {
   font-size: 56px;
@@ -47,23 +47,26 @@ a {
 /* ===== ABOUT STATS ===== */
 .stat-box {
   background: #ff4d30;
-  padding: 30px;
-  font-size: 32px;
+  padding-top: 50px;
+  font-size: 20px;
+  height: 100%;
   font-weight: 700;
   text-align: center;
 }
 
 .stat-box small {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
 /* ===== DARK CARD ===== */
 .dark-card {
   background: #161616;
-  padding: 25px;
+  padding-top: 50px;
   height: 100%;
+
+  color: #fff;
   text-align: center;
 }
 
@@ -109,4 +112,3 @@ ul li {
 .cta h3 {
   font-weight: 700;
 }
-
