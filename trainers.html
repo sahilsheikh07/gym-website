@@ -523,29 +523,8 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="../js/main.js"></script>
     <script>
-      // Load header and footer
-      fetch("../includes/header.html")
-        .then((res) => res.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-          // Mark trainers page as active
-          setTimeout(() => {
-            const navLinks = document.querySelectorAll(".nav-link");
-            navLinks.forEach((link) => {
-              if (link.textContent.includes("Trainers")) {
-                link.classList.add("active");
-              }
-            });
-          }, 100);
-        })
-        .catch(() => console.log("Header not found"));
-
-      fetch("../includes/footer.html")
-        .then((res) => res.text())
-        .then((data) => (document.getElementById("footer").innerHTML = data))
-        .catch(() => console.log("Footer not found"));
-
       // Trainer data
       const trainers = {
         1: {
