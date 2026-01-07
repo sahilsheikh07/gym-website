@@ -1,77 +1,777 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Our Trainers | Gym Fit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Our Trainers | Gym Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="../css/traniers.css" />
-</head>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/traniers.css" />
+  </head>
 
-<body>
-  <!-- ===== Navbar ===== -->
-  <div id="header"></div>
+  <body>
+    <!-- ===== Navbar ===== -->
+    <div id="header"></div>
 
-  <!-- ===== Trainers Section ===== -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Our Professional Trainers</h2>
-        <p class="text-muted">Meet our expert fitness trainers</p>
+    <!-- ===== Hero Section ===== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h1 class="hero-title fade-in">Meet Our Elite Training Team</h1>
+            <p class="hero-subtitle fade-in">
+              Our certified professional trainers bring years of experience,
+              scientific knowledge, and personalized approaches to help you
+              achieve your fitness goals. Each trainer is committed to your
+              success and wellbeing.
+            </p>
+
+            <div class="hero-stats fade-in">
+              <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Certified Trainers</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Happy Clients</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="row g-4">
-        <!-- Trainer 1 -->
-        <div class="col-md-4">
-          <div class="card text-center shadow">
-            <img src="../images/trainer1.jpg" class="card-img-top" alt="Trainer" />
-            <div class="card-body">
-              <h5 class="card-title">Rahul Sharma</h5>
-              <p class="card-text">Weight Training Expert</p>
-              <span class="badge bg-success">5+ Years Experience</span>
+    <!-- ===== Trainers Section ===== -->
+    <section class="trainers-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Expert Fitness Coaches</h2>
+          <p class="section-subtitle">
+            Our trainers are certified professionals with specialized expertise
+            in various fitness disciplines. They combine technical knowledge
+            with motivational skills to ensure your success.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Trainer 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card fade-in">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/trainer/img1.jpg"
+                  class="trainer-img"
+                  alt="Joe Wicks"
+                />
+                <span class="trainer-badge">CERTIFIED PRO</span>
+                <div class="trainer-social">
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Joe Wicks</h3>
+                <p class="trainer-specialty">
+                  Weight Training & Bodybuilding Specialist
+                </p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-2"></i>8+ Years Experience
+                </span>
+                <div class="trainer-skills">
+                  <span class="skill-tag">Bodybuilding</span>
+                  <span class="skill-tag">Strength</span>
+                  <span class="skill-tag">Nutrition</span>
+                  <span class="skill-tag">Recovery</span>
+                </div>
+                <button class="btn-trainer" onclick="showTrainerModal(1)">
+                  <i class="fas fa-calendar-check me-2"></i>Book Session
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card fade-in">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/trainer/img2.jpg"
+                  class="trainer-img"
+                  alt="Tracy Anderson"
+                />
+                <span class="trainer-badge">ELITE COACH</span>
+                <div class="trainer-social">
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Tracy Anderson</h3>
+                <p class="trainer-specialty">Cardio & CrossFit Head Coach</p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-2"></i>6+ Years Experience
+                </span>
+                <div class="trainer-skills">
+                  <span class="skill-tag">CrossFit</span>
+                  <span class="skill-tag">HIIT</span>
+                  <span class="skill-tag">Endurance</span>
+                  <span class="skill-tag">Fat Loss</span>
+                </div>
+                <button class="btn-trainer" onclick="showTrainerModal(2)">
+                  <i class="fas fa-calendar-check me-2"></i>Book Session
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card fade-in">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/trainer/img3.jpg"
+                  class="trainer-img"
+                  alt="Michelle Lewin"
+                />
+                <span class="trainer-badge">YOGA MASTER</span>
+                <div class="trainer-social">
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Michelle Lewin</h3>
+                <p class="trainer-specialty">Yoga & Wellness Expert</p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-2"></i>10+ Years Experience
+                </span>
+                <div class="trainer-skills">
+                  <span class="skill-tag">Yoga</span>
+                  <span class="skill-tag">Meditation</span>
+                  <span class="skill-tag">Flexibility</span>
+                  <span class="skill-tag">Wellness</span>
+                </div>
+                <button class="btn-trainer" onclick="showTrainerModal(3)">
+                  <i class="fas fa-calendar-check me-2"></i>Book Session
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card fade-in">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/trainer/img4.jpg"
+                  class="trainer-img"
+                  alt="David Chen"
+                />
+                <span class="trainer-badge">PT SPECIALIST</span>
+                <div class="trainer-social">
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">David Chen</h3>
+                <p class="trainer-specialty">Personal Training Director</p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-2"></i>12+ Years Experience
+                </span>
+                <div class="trainer-skills">
+                  <span class="skill-tag">PT</span>
+                  <span class="skill-tag">Rehab</span>
+                  <span class="skill-tag">Strength</span>
+                  <span class="skill-tag">Conditioning</span>
+                </div>
+                <button class="btn-trainer" onclick="showTrainerModal(4)">
+                  <i class="fas fa-calendar-check me-2"></i>Book Session
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card fade-in">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/trainer/img5.jpg"
+                  class="trainer-img"
+                  alt="Sarah Johnson"
+                />
+                <span class="trainer-badge">NUTRITION EXPERT</span>
+                <div class="trainer-social">
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Sarah Johnson</h3>
+                <p class="trainer-specialty">Nutrition & Diet Coach</p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-2"></i>7+ Years Experience
+                </span>
+                <div class="trainer-skills">
+                  <span class="skill-tag">Nutrition</span>
+                  <span class="skill-tag">Diet</span>
+                  <span class="skill-tag">Wellness</span>
+                  <span class="skill-tag">Health</span>
+                </div>
+                <button class="btn-trainer" onclick="showTrainerModal(5)">
+                  <i class="fas fa-calendar-check me-2"></i>Book Session
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="trainer-card fade-in">
+              <div class="trainer-img-container">
+                <img
+                  src="../assets/trainer/img6.jpg"
+                  class="trainer-img"
+                  alt="Marcus Lee"
+                />
+                <span class="trainer-badge">HIIT SPECIALIST</span>
+                <div class="trainer-social">
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="trainer-content">
+                <h3 class="trainer-name">Marcus Lee</h3>
+                <p class="trainer-specialty">
+                  HIIT & Functional Training Expert
+                </p>
+                <span class="trainer-experience">
+                  <i class="fas fa-award me-2"></i>5+ Years Experience
+                </span>
+                <div class="trainer-skills">
+                  <span class="skill-tag">HIIT</span>
+                  <span class="skill-tag">Functional</span>
+                  <span class="skill-tag">Cardio</span>
+                  <span class="skill-tag">Fat Burn</span>
+                </div>
+                <button class="btn-trainer" onclick="showTrainerModal(6)">
+                  <i class="fas fa-calendar-check me-2"></i>Book Session
+                </button>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Trainer 2 -->
-        <div class="col-md-4">
-          <div class="card text-center shadow">
-            <img src="../images/trainer2.jpg" class="card-img-top" alt="Trainer" />
-            <div class="card-body">
-              <h5 class="card-title">Amit Verma</h5>
-              <p class="card-text">Cardio & CrossFit Coach</p>
-              <span class="badge bg-success">4+ Years Experience</span>
-            </div>
-          </div>
+    <!-- ===== Specializations Section ===== -->
+    <section class="specializations-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Training Specializations</h2>
+          <p class="section-subtitle">
+            We offer comprehensive training programs across various fitness
+            disciplines to cater to all your fitness needs and goals.
+          </p>
         </div>
 
-        <!-- Trainer 3 -->
-        <div class="col-md-4">
-          <div class="card text-center shadow">
-            <img src="../images/trainer3.jpg" class="card-img-top" alt="Trainer" />
-            <div class="card-body">
-              <h5 class="card-title">Neha Singh</h5>
-              <p class="card-text">Yoga & Fitness Trainer</p>
-              <span class="badge bg-success">6+ Years Experience</span>
+        <div class="specialization-grid">
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-dumbbell"></i>
+            </div>
+            <h4>Strength Training</h4>
+            <p>
+              Build muscle, increase strength, and improve body composition with
+              personalized strength programs.
+            </p>
+          </div>
+
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-running"></i>
+            </div>
+            <h4>Cardio Fitness</h4>
+            <p>
+              Improve cardiovascular health, endurance, and burn calories with
+              effective cardio workouts.
+            </p>
+          </div>
+
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-spa"></i>
+            </div>
+            <h4>Yoga & Flexibility</h4>
+            <p>
+              Enhance flexibility, reduce stress, and improve mental focus
+              through yoga and meditation.
+            </p>
+          </div>
+
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h4>HIIT Workouts</h4>
+            <p>
+              Maximum results in minimum time with high-intensity interval
+              training sessions.
+            </p>
+          </div>
+
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h4>Nutrition Coaching</h4>
+            <p>
+              Personalized diet plans and nutritional guidance to complement
+              your fitness journey.
+            </p>
+          </div>
+
+          <div class="specialization-card">
+            <div class="specialization-icon">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <h4>Rehabilitation</h4>
+            <p>
+              Specialized programs for injury recovery and prevention with
+              professional guidance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA Section ===== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="cta-title">Ready to Start Your Transformation?</h2>
+            <p class="cta-text">
+              Book your first session with one of our expert trainers today and
+              take the first step towards a healthier, stronger you. Personal
+              assessment and trial session available.
+            </p>
+            <button class="btn-cta" onclick="showBookingModal()">
+              <i class="fas fa-calendar-alt me-2"></i>Book Your First Session
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <div id="footer"></div>
+
+    <!-- ===== Modals ===== -->
+    <!-- Trainer Booking Modal -->
+    <div class="modal fade" id="trainerModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Book Training Session</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="modalContent">
+              <!-- Content will be loaded here -->
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===== Footer ===== -->
-  <div id="footer"></div>
+    <!-- General Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Book Your First Session</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="bookingForm">
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Preferred Trainer</label>
+                <select class="form-select" required>
+                  <option value="">Select a trainer</option>
+                  <option>Joe Wicks - Strength Training</option>
+                  <option>Tracy Anderson - Cardio & CrossFit</option>
+                  <option>Michelle Lewin - Yoga & Wellness</option>
+                  <option>David Chen - Personal Training</option>
+                  <option>Sarah Johnson - Nutrition Coach</option>
+                  <option>Marcus Lee - HIIT Training</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Preferred Date</label>
+                <input type="date" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Session Type</label>
+                <select class="form-select" required>
+                  <option value="">Select session type</option>
+                  <option>Initial Assessment (Free)</option>
+                  <option>Single Session</option>
+                  <option>5 Session Package</option>
+                  <option>10 Session Package</option>
+                  <option>Monthly Unlimited</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Goals & Notes</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Tell us about your fitness goals..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 py-2">
+                <i class="fas fa-paper-plane me-2"></i>Submit Booking Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- For header footer -->
-  <script src="../js/main.js"></script>
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- JavaScript -->
+    <script>
+      // Load header and footer
+      fetch("../includes/header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          // Mark trainers page as active
+          setTimeout(() => {
+            const navLinks = document.querySelectorAll(".nav-link");
+            navLinks.forEach((link) => {
+              if (link.textContent.includes("Trainers")) {
+                link.classList.add("active");
+              }
+            });
+          }, 100);
+        })
+        .catch(() => console.log("Header not found"));
 
+      fetch("../includes/footer.html")
+        .then((res) => res.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data))
+        .catch(() => console.log("Footer not found"));
+
+      // Trainer data
+      const trainers = {
+        1: {
+          name: "Joe Wicks",
+          img: "../assets/trainer/img1.jpg",
+          specialty: "Weight Training & Bodybuilding Specialist",
+          experience: "8+ Years Experience",
+          certification: "ACE Certified, NASM CPT",
+          rate: "₹3,500 per session",
+          bio: "Specialized in strength training, bodybuilding, and athletic performance. Has trained 500+ clients.",
+        },
+        2: {
+          name: "Tracy Anderson",
+          img: "../assets/trainer/img2.jpg",
+          specialty: "Cardio & CrossFit Head Coach",
+          experience: "6+ Years Experience",
+          certification: "CrossFit L2, ACE Certified",
+          rate: "₹3,000 per session",
+          bio: "Expert in high-intensity training, endurance building, and functional fitness.",
+        },
+        3: {
+          name: "Michelle Lewin",
+          img: "../assets/trainer/img3.jpg",
+          specialty: "Yoga & Wellness Expert",
+          experience: "10+ Years Experience",
+          certification: "RYT 500, Yoga Alliance",
+          rate: "₹2,800 per session",
+          bio: "Specialized in yoga therapy, meditation, and holistic wellness practices.",
+        },
+        4: {
+          name: "David Chen",
+          img: "../assets/trainer/img4.jpg",
+          specialty: "Personal Training Director",
+          experience: "12+ Years Experience",
+          certification: "NASM CPT, FMS Certified",
+          rate: "₹4,000 per session",
+          bio: "Expert in personalized training programs, rehabilitation, and athletic conditioning.",
+        },
+        5: {
+          name: "Sarah Johnson",
+          img: "../assets/trainer/img5.jpg",
+          specialty: "Nutrition & Diet Coach",
+          experience: "7+ Years Experience",
+          certification: "Precision Nutrition, ISSA",
+          rate: "₹2,500 per session",
+          bio: "Specialized in sports nutrition, weight management, and dietary planning.",
+        },
+        6: {
+          name: "Marcus Lee",
+          img: "../assets/trainer/img6.jpg",
+          specialty: "HIIT & Functional Training Expert",
+          experience: "5+ Years Experience",
+          certification: "ACE CPT, Functional Trainer",
+          rate: "₹3,200 per session",
+          bio: "Expert in high-intensity interval training and functional movement patterns.",
+        },
+      };
+
+      // Show trainer modal
+      function showTrainerModal(trainerId) {
+        const trainer = trainers[trainerId];
+        if (!trainer) return;
+
+        const modalContent = `
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="${
+                          trainer.img
+                        }" class="trainer-modal-img" alt="${trainer.name}">
+                        <div class="text-center mt-3">
+                            <h5>${trainer.name}</h5>
+                            <p class="text-muted">${trainer.specialty}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h5>About ${trainer.name.split(" ")[0]}</h5>
+                        <p>${trainer.bio}</p>
+                        
+                        <div class="mb-3">
+                            <strong>Certifications:</strong><br>
+                            <span class="badge bg-primary me-1">${
+                              trainer.certification
+                            }</span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <strong>Session Rate:</strong><br>
+                            <span class="h5 text-primary">${trainer.rate}</span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Select Date</label>
+                            <input type="date" class="form-control" id="sessionDate">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Select Time Slot</label>
+                            <select class="form-select" id="sessionTime">
+                                <option>7:00 AM - 8:00 AM</option>
+                                <option>8:00 AM - 9:00 AM</option>
+                                <option>5:00 PM - 6:00 PM</option>
+                                <option>6:00 PM - 7:00 PM</option>
+                                <option>7:00 PM - 8:00 PM</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Session Type</label>
+                            <select class="form-select">
+                                <option>Single Session</option>
+                                <option>5 Session Package (Save 15%)</option>
+                                <option>10 Session Package (Save 25%)</option>
+                            </select>
+                        </div>
+                        
+                       <div class="d-grid gap-2">
+    <button class="btn btn-primary" onclick="confirmBooking(${trainerId})" 
+            style="background-color: #ff8e53; border-color: #ff8e53;">
+        <i class="fas fa-calendar-check me-2"></i>Book Now
+    </button>
+    <button class="btn btn-outline-primary" data-bs-dismiss="modal"
+            style="color: #ff8e53; border-color: #ff8e53;">
+        <i class="fas fa-times me-2"></i>Cancel
+    </button>
+</div>
+                    </div>
+                </div>
+            `;
+
+        document.getElementById("modalContent").innerHTML = modalContent;
+
+        // Set minimum date to tomorrow
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const sessionDate = document.getElementById("sessionDate");
+        if (sessionDate) {
+          sessionDate.min = tomorrow.toISOString().split("T")[0];
+          sessionDate.value = tomorrow.toISOString().split("T")[0];
+        }
+
+        const modal = new bootstrap.Modal(
+          document.getElementById("trainerModal")
+        );
+        modal.show();
+      }
+
+      // Show booking modal
+      function showBookingModal() {
+        const modal = new bootstrap.Modal(
+          document.getElementById("bookingModal")
+        );
+        modal.show();
+
+        // Set minimum date to tomorrow
+        const dateInput = document.querySelector(
+          '#bookingForm input[type="date"]'
+        );
+        if (dateInput) {
+          const tomorrow = new Date();
+          tomorrow.setDate(tomorrow.getDate() + 1);
+          dateInput.min = tomorrow.toISOString().split("T")[0];
+        }
+      }
+
+      // Confirm booking
+      function confirmBooking(trainerId) {
+        const trainer = trainers[trainerId];
+        const date = document.getElementById("sessionDate").value;
+        const time = document.getElementById("sessionTime").value;
+
+        if (!date) {
+          alert("Please select a date");
+          return;
+        }
+
+        alert(
+          `Booking confirmed with ${trainer.name}!\nDate: ${date}\nTime: ${time}\nYou will receive a confirmation email shortly.`
+        );
+
+        const modal = bootstrap.Modal.getInstance(
+          document.getElementById("trainerModal")
+        );
+        modal.hide();
+      }
+
+      // Booking form submission
+      document
+        .getElementById("bookingForm")
+        ?.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert(
+            "Thank you for your booking request! Our team will contact you within 2 hours to confirm your session."
+          );
+          const modal = bootstrap.Modal.getInstance(
+            document.getElementById("bookingModal")
+          );
+          modal.hide();
+          this.reset();
+        });
+
+      // Add scroll animations
+      document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        fadeElements.forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(20px)";
+          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          observer.observe(el);
+        });
+      });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
