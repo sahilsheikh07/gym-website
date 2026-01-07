@@ -30,7 +30,30 @@ body {
   background: rgba(0, 0, 0, 0.5); /* dark overlay */
   z-index: 2;
 }
-.hero-content {
-  position: relative;
-  z-index: 3;
+
+.program-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.program-card .card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.program-card .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background: #d2d6d1;
+  color: #fff;
+}
+
+.program-card .card:hover p {
+  color: #101011;
+}
+
+.icon {
+  font-size: 82px;
 }
