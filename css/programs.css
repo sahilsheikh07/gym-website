@@ -28,6 +28,12 @@ body {
   font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+}
+
 .nav-link {
   color: #fff !important;
   font-weight: 500;
