@@ -1,201 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home | Oxygen Gym</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Gym Fit | Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="../css/index.css" />
-</head>
+  <body>
+    <!-- ===== Navbar ===== -->
+    <div id="header"></div>
 
+    <!-- ===== Hero Section ===== -->
+    <div
+      id="heroCarousel"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div
+            class="hero-slide d-flex align-items-center justify-content-center text-white"
+          >
+            <video class="bg-video" autoplay muted loop playsinline>
+              <source src="./assets/banner/gym1.mp4" type="video/mp4" />
+            </video>
 
-
-<body>
-  <!-- ===== Navbar ===== -->
-  <div id="header"></div>
-
-  <!-- ===== Hero Section ===== -->
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-interval="2000" data-bs-ride="carousel">
-
-    <div class="carousel-inner">
-
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="hero-slide d-flex align-items-center justify-content-center text-white">
-
-          <video class="bg-video" autoplay muted loop playsinline style="width: 100%;height: auto;">
-            <source src="./assets/banner/gym1.mp4" type="video/mp4">
-          </video>
-
-          <div class="hero-content text-center position-relative">
-            <h1 class="display-4 fw-bold">Build Your Perfect Body</h1>
-            <p class="lead">Join our gym and achieve your fitness goals</p>
-            <a href="../membership.html" class="btn btn-danger btn-lg mt-3">
-              Join Now
-            </a>
+            <div class="hero-content text-center">
+              <h1 class="fw-bold">Build Your Perfect Body</h1>
+              <p>Join our gym and achieve your fitness goals</p>
+              <a href="../membership.html" class="btn btn-danger btn-lg mt-3">
+                Join Now
+              </a>
+            </div>
           </div>
+        </div>
 
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div
+            class="hero-slide d-flex align-items-center justify-content-center text-white"
+          >
+            <video class="bg-video" autoplay muted loop playsinline>
+              <source src="./assets/banner/boxing.mp4" type="video/mp4" />
+            </video>
+
+            <div class="hero-content text-center">
+              <h1 class="fw-bold">Train Hard, Stay Fit</h1>
+              <p>Professional trainers & modern equipment</p>
+              <a href="../membership.html" class="btn btn-danger btn-lg mt-3">
+                Join Now
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="carousel-item active">
-        <div class="hero-slide d-flex align-items-center justify-content-center text-white">
+      <!-- Controls -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
 
-          <!-- Background Video -->
-          <video class="bg-video" autoplay muted loop playsinline>
-            <source src="./assets/banner/boxing.mp4" type="video/mp4">
-          </video>
-
-          <!-- Center Content -->
-          <div class="hero-content text-center position-relative">
-            <h1 class="display-4 fw-bold">Build Your Perfect Body</h1>
-            <p class="lead">Join our gym and achieve your fitness goals</p>
-            <a href="../membership.html" class="btn btn-danger btn-lg mt-3">
-              Join Now
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-
-
-
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
 
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-
-  </div>
-
-
-  <!-- ===== About Section ===== -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <h2 class="fw-bold">About Our Gym</h2>
-          <p>
-            Gym Fit is a modern fitness center providing professional
-            training, advanced equipment and healthy environment to achieve
-            your fitness goals.
-          </p>
-          <p>
-            Our trainers help you with proper workout plans and diet guidance.
-          </p>
-        </div>
-        <div class="col-md-6">
-          <img src="../assets/dumbels.jpg" class="img-fluid rounded" alt="Gym" />
+    <!-- ===== About Section ===== -->
+    <section class="py-5 about-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">About Our Gym</h2>
+            <p>
+              Gym Fit is a modern fitness center providing professional
+              training, advanced equipment and a healthy environment.
+            </p>
+            <p>Our trainers guide you with workout plans and diet charts.</p>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="../assets/dumbels.jpg"
+              class="img-fluid rounded"
+              alt="Gym"
+            />
+          </div>
         </div>
       </div>
-  </section>
+    </section>
 
     <!-- ===== Programs Section ===== -->
-  <section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Our Programs</h2>
-      <p class="text-muted">Choose the best fitness program for you</p>
-    </div>
-
-    <div class="row g-4">
-      <!-- Card -->
-      <div class="col-md-3 col-sm-6">
-        <a href="programs.html" class="program-card">
-          <div class="card text-center h-100">
-            <div class="card-body">
-              <div class="icon mb-3">🏋️</div>
-              <h5 class="card-title">Weight Training</h5>
-              <p class="card-text">Build strength & muscle mass</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <a href="programs.html" class="program-card">
-          <div class="card text-center h-100">
-            <div class="card-body">
-              <div class="icon mb-3">🏃</div>
-              <h5 class="card-title">Cardio</h5>
-              <p class="card-text">Boost stamina & endurance</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <a href="programs.html" class="program-card">
-          <div class="card text-center h-100">
-            <div class="card-body">
-              <div class="icon mb-3">🧘</div>
-              <h5 class="card-title">Yoga</h5>
-              <p class="card-text">Relax your mind & body</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <a href="programs.html" class="program-card">
-          <div class="card text-center h-100">
-            <div class="card-body">
-              <div class="icon mb-3">🔥</div>
-              <h5 class="card-title">CrossFit</h5>
-              <p class="card-text">High-intensity workouts</p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- ===== Why Choose Us ===== -->
-  <section class="py-5">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="fw-bold">Why Choose Us</h2>
-      </div>
-
-      <div class="row text-center">
-        <div class="col-md-4">
-          <h5>Expert Trainers</h5>
-          <p>Certified and experienced trainers</p>
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Our Programs</h2>
+          <p class="text-muted">Choose the best fitness program</p>
         </div>
-        <div class="col-md-4">
-          <h5>Modern Equipment</h5>
-          <p>Latest fitness machines</p>
-        </div>
-        <div class="col-md-4">
-          <h5>Healthy Environment</h5>
-          <p>Clean and safe gym space</p>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="programs.html" class="program-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="icon">🏋️</div>
+                  <h5>Weight Training</h5>
+                  <p>Build strength & muscle</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="programs.html" class="program-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="icon">🏃</div>
+                  <h5>Cardio</h5>
+                  <p>Improve stamina</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="programs.html" class="program-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="icon">🧘</div>
+                  <h5>Yoga</h5>
+                  <p>Relax body & mind</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="programs.html" class="program-card">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <div class="icon">🔥</div>
+                  <h5>CrossFit</h5>
+                  <p>High intensity workout</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== Footer ===== -->
-  <div id="footer"></div>
+    <!-- ===== Why Choose Us ===== -->
+    <section class="py-5 why-choose-us">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold">Why Choose Us</h2>
+        </div>
 
-  <!-- For header footer -->
-  <script src="../js/main.js"></script>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <h5>Expert Trainers</h5>
+            <p>Certified professionals</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Modern Equipment</h5>
+            <p>Latest machines</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Healthy Environment</h5>
+            <p>Clean & safe gym</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===== Footer ===== -->
+    <div id="footer"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
