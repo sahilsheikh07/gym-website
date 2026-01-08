@@ -1,9 +1,9 @@
 /* ===== GLOBAL ===== */
-body {
+/* body {
   background: #0e0e0e;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
-}
+} */
 
 a {
   text-decoration: none;
@@ -12,9 +12,7 @@ a {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(167, 161, 161, 0.9)),
-    url("https://images.unsplash.com/photo-1554284126-aa88f22d8b74")
-      center/cover no-repeat;
+  background: url("../assets/cardio/4.jpg") center/cover no-repeat;
   padding: 120px 0;
   text-align: center;
   height: 350px;
@@ -23,7 +21,7 @@ a {
 .hero h1 {
   font-size: 56px;
   font-weight: 700;
-  color: #ff4d30;
+  color: white;
 }
 
 .hero p {
@@ -93,22 +91,61 @@ ul li {
 }
 
 .icon-box i {
-  font-size: 32px;
-  color: #ff4d30;
+  font-size: 40px;
+  color: #1d1107;
   margin-bottom: 12px;
-}
-
-.icon-box h6 {
-  font-weight: 600;
 }
 
 /* ===== CTA ===== */
 .cta {
-  background: #ff4d30;
+  background: #a39a99;
   padding: 50px 0;
   text-align: center;
 }
 
+/* ===== CTA SECTION ===== */
+.cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("../assets/cardio/5.jpg") top center / cover no-repeat;
+  padding: 30px 0;
+  min-height: 70px;
+  color: #fff;
+}
+
 .cta h3 {
+  font-size: 2.2rem;
   font-weight: 700;
+}
+
+.cta .highlight {
+  color: #ff4d30;
+}
+
+.cta-text {
+  max-width: 650px;
+  margin: auto;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+/* CTA BUTTON */
+.btn-cta {
+  background: #962114;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: #e84328;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 77, 48, 0.4);
+  transition: all 0.3s ease;
+}
+
+.text-2 {
+  color: #ffffff;
 }

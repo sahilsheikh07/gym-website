@@ -43,13 +43,11 @@ body {
 /* Page Header */
 .page-header {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../images/banner/2.jpg");
-  background-size: cover;
-  background-position: center;
+    url("../assets/cardio/3.jpg") no-repeat center center / cover;
   color: white;
   padding: 5rem 0;
-  margin-top: -76px; /* Compensate for fixed navbar */
-  padding-top: calc(5rem + 76px); /* Add navbar height */
+  margin-top: -76px;
+  padding-top: calc(5rem + 76px);
 }
 
 .page-header h1 {
