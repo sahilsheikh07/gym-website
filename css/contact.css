@@ -17,6 +17,7 @@
   background: url("../assets/cardio/1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
+  opacity: inherit;
   justify-content: center;
 }
 
@@ -33,7 +34,7 @@
 
 .hero-content h1 {
   font-size: 48px;
-  color: #ff6b35;
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -63,8 +64,8 @@
   background: transparent;
 }
 
-.form-text {
-  color: #fff;
+.contect-form-text {
+  color: #ffffff;
   margin-bottom: 25px;
 }
 
@@ -95,21 +96,31 @@
 
 /* CTA */
 .cta {
-  background: #ff4d2d;
+  background: url("../assets/cardio/5.jpg") center/cover no-repeat;
   padding: 40px 0;
 }
 
 .cta h3 {
   font-weight: 600;
+  color: #fff;
 }
 
 .cta-btn {
+  background: #ff4d2d;
+  border: 2px solid #ff4d2d;
+  color: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.cta-btn:hover {
   background: transparent;
   border: 2px solid #fff;
   color: #fff;
   padding: 10px 30px;
   text-decoration: none;
   font-weight: 600;
+  transition: 1s ease;
 }
 
 /* RESPONSIVE */
