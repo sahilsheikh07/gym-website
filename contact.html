@@ -8,15 +8,9 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
- <link
-  rel="icon"
-  type="image/svg+xml"
-  href="data:image/svg+xml,
-  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'>
-  <path fill='%23dc3545'
-  d='M96 96c-17.7 0-32 14.3-32 32v64H32c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32h32v64c0 17.7 14.3 32 32 32s32-14.3 32-32v-64h320v64c0 17.7 14.3 32 32 32s32-14.3 32-32v-64h32c17.7 0 32-14.3 32-32v-64c0-17.7-14.3-32-32-32h-32v-64c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H128v-64c0-17.7-14.3-32-32-32z'/>
-  </svg>"
-    />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23dc3545' d='M96 96c-17.7 0-32 14.3-32 32v64H32c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32h32v64c0 17.7 14.3 32 32 32s32-14.3 32-32v-64h320v64c0 17.7 14.3 32 32 32s32-14.3 32-32v-64h32c17.7 0 32-14.3 32-32v-64c0-17.7-14.3-32-32-32h-32v-64c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H128v-64c0-17.7-14.3-32-32-32z'/%3E%3C/svg%3E" />
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/contact.css" />
 </head>
@@ -26,6 +20,7 @@
 </head>
 
 <body style="color: #000000;">
+
   <!-- ===== Navbar ===== -->
   <div id="header"></div>
 
@@ -41,11 +36,9 @@
   <section class="contact-section">
     <div class="container">
       <div class="row g-5">
-
         <!-- LEFT INFO -->
         <div class="col-lg-6">
           <div class="locations">
-
             <div class="location">
               <h5>New York</h5>
               <p>350 5th Ave, New York, NY 10118</p>
@@ -70,143 +63,75 @@
             <div class="location">
               <h5>Houston</h5>
               <p>350 5th Ave, New York, NY 10118</p>
-              <!-- <p>(212) 555-0134</p> -->
+              <p>(212) 555-0134</p>
               <p>nyc@powerflow.com</p>
             </div>
-
           </div>
         </div>
 
         <!-- RIGHT FORM -->
         <div class="col-lg-6">
           <div class="contact-form">
-            <p class="form-text" style="color: #fff;">
-              Have a question, suggestion, or just want to say hi?
-              We’re here and happy to hear from you!
+            <p class="contect-form-text">
+              Have a question, suggestion, or just want to say hi? We’re here
+              and happy to hear from you!
             </p>
 
             <form>
-              <input type="text" placeholder="Your Name" required>
-              <input type="email" placeholder="Your Email" required>
-              <input type="text" placeholder="Your Phone">
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <input type="text" placeholder="Your Phone" />
               <textarea placeholder="Your Message"></textarea>
               <button type="submit">SEND MESSAGE</button>
             </form>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <body style="color: #000000">
-          <!-- ===== Navbar ===== -->
-          <div id="header"></div>
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <h3>Ready to take the first step towards your fitness goals?</h3>
+      <a href="/membership.html" class="cta-btn">JOIN NOW</a>
+    </div>
+  </section>
 
-          <!-- ===== Contact Section ===== -->
-          <section class="contact-hero">
-            <div class="overlay"></div>
-            <div class="container text-center hero-content">
-              <h1>Contact Us</h1>
-            </div>
-          </section>
+  <!-- ===== Footer ===== -->
+  <div id="footer"></div>
 
-          <!-- CONTACT SECTION -->
-          <section class="contact-section">
-            <div class="container">
-              <div class="row g-5">
-                <!-- LEFT INFO -->
-                <div class="col-lg-6">
-                  <div class="locations">
-                    <div class="location">
-                      <h5>New York</h5>
-                      <p>350 5th Ave, New York, NY 10118</p>
-                      <p>(212) 555-0134</p>
-                      <p>nyc@powerflow.com</p>
-                    </div>
+  <!-- For header footer -->
+  <script src="../js/main.js"></script>
 
-                    <div class="location">
-                      <h5>Los Angeles</h5>
-                      <p>742 S Hill St, Los Angeles, CA 90014</p>
-                      <p>(212) 555-0134</p>
-                      <p>nyc@powerflow.com</p>
-                    </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-                    <div class="location">
-                      <h5>Chicago</h5>
-                      <p>350 5th Ave, New York, NY 10118</p>
-                      <p>(212) 555-0134</p>
-                      <p>nyc@powerflow.com</p>
-                    </div>
+  <!-- JavaScript -->
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const formMsg = document.getElementById("formMsg");
 
-                    <div class="location">
-                      <h5>Houston</h5>
-                      <p>350 5th Ave, New York, NY 10118</p>
-                      <p>(212) 555-0134</p>
-                      <p>nyc@powerflow.com</p>
-                    </div>
-                  </div>
-                </div>
+      if (name === "" || email === "" || message === "") {
+        formMsg.innerHTML = "Please fill all fields";
+        formMsg.style.color = "red";
+        return false;
+      }
 
-                <!-- RIGHT FORM -->
-                <div class="col-lg-6">
-                  <div class="contact-form">
-                    <p class="form-text">
-                      Have a question, suggestion, or just want to say hi? We’re here
-                      and happy to hear from you!
-                    </p>
+      formMsg.innerHTML = "Message sent successfully!";
+      formMsg.style.color = "green";
 
-                    <form>
-                      <input type="text" placeholder="Your Name" required />
-                      <input type="email" placeholder="Your Email" required />
-                      <input type="text" placeholder="Your Phone" />
-                      <textarea placeholder="Your Message"></textarea>
-                      <button type="submit">SEND MESSAGE</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+      // clear form
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
 
-          <!-- CTA -->
-          <section class="cta">
-            <div class="container d-flex justify-content-between align-items-center flex-wrap">
-              <h3>Ready to take the first step towards your fitness goals?</h3>
-              <a href="/membership.html" class="cta-btn">JOIN NOW</a>
-            </div>
-          </section>
-
-          <!-- ===== Footer ===== -->
-          <div id="footer"></div>
-
-          <!-- For header footer -->
-          <script src="../js/main.js"></script>
-
-          <!-- Bootstrap JS -->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-          <!-- JavaScript -->
-          <script>
-            function validateForm() {
-              const name = document.getElementById("name").value;
-              const email = document.getElementById("email").value;
-              const message = document.getElementById("message").value;
-              const formMsg = document.getElementById("formMsg");
-
-              if (name === "" || email === "" || message === "") {
-                formMsg.innerHTML = "Please fill all fields";
-                formMsg.style.color = "red";
-                return false;
-              }
-
-              formMsg.innerHTML = "Message sent successfully!";
-              formMsg.style.color = "green";
-
-              // clear form
-              document.getElementById("name").value = "";
-              document.getElementById("email").value = "";
-              document.getElementById("message").value = "";
-
-              return false; // backend nahi hai
-            }
-          </script>
-        </body>
+      return false; // backend nahi hai
+    }
+  </script>
+</body>
 
 </html>
