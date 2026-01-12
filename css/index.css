@@ -250,3 +250,55 @@ body {
     font-size: 18px;
   }
 }
+/* ===== Why Choose Gym ===== */
+.why-choose-gym {
+  background: linear-gradient(135deg, #111, #222);
+  color: #fff;
+}
+
+.gym-badge {
+  background: #cf481f;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gym-points {
+  margin-top: 20px;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.point span {
+  color:#cf481f;
+  font-size: 18px;
+}
+
+.gym-stat {
+  background: #1c1c1c;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.gym-stat:hover {
+  transform: translateY(-6px);
+  background: #ff7a00;
+}
+
+.gym-stat h3 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.gym-stat p {
+  margin: 0;
+  font-size: 14px;
+}
