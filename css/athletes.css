@@ -353,7 +353,8 @@ body {
 /* ===== Athletes Section ===== */
 .athletes-section {
   padding: 60px 0;
-  background: url("../assets/banner/2.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("../assets/banner/2.jpg") center/cover no-repeat black;
 }
 
 .athletes-title {
