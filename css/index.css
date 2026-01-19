@@ -574,6 +574,44 @@ body {
     height: 180px;
   }
 }
+.why-choose-gym {
+  color: #ffffff;
+}
+
+/* Headings */
+.why-choose-gym h2,
+.why-choose-gym h3 {
+  color: #ffffff;
+}
+
+/* Paragraphs */
+.why-choose-gym p {
+  color: #ffffff;
+}
+
+/* Badge */
+.why-choose-gym .gym-badge {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+/* Points (✔ and text) */
+.why-choose-gym .point span,
+.why-choose-gym .point p {
+  color: #ffffff;
+}
+
+/* Stats box */
+/* .why-choose-gym .gym-stat {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+} */
+
+/* Button text */
+.why-choose-gym .btn-danger {
+  color: #ffffff;
+}
+
 
 /* Scroll Animation */
 .fade-in {
