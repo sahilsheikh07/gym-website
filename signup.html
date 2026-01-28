@@ -1,133 +1,838 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Sign Up</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Our Gym | FitLife</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
 
     <style>
-        .signup-card {
-            background-color: #111;
-            border-radius: 15px;
-            padding: 35px;
-            width: 100%;
-            max-width: 450px;
-            box-shadow: 0 0 25px rgba(255, 102, 0, 0.4);
-            border: 1px solid rgba(255, 102, 0, 0.3);
-            margin-top: 10px;
-            /* margin-bottom: 70px; */
+      :root {
+        --primary: #ff6600;
+        --primary-dark: #e55a00;
+        --dark: #0a0a0a;
+        --dark-light: #1a1a1a;
+        --light: #f8f9fa;
+        --gray: #6c757d;
+        --gradient: linear-gradient(135deg, #ff6600 0%, #ff8c42 100%);
+        --success: #28a745;
+        --error: #dc3545;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--dark);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-image:
+          radial-gradient(
+            circle at 10% 20%,
+            rgba(255, 102, 0, 0.05) 0%,
+            transparent 20%
+          ),
+          radial-gradient(
+            circle at 90% 80%,
+            rgba(255, 102, 0, 0.05) 0%,
+            transparent 20%
+          );
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* Background Animation */
+      .bg-animation {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .bg-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 102, 0, 0.03);
+        animation: float 15s infinite linear;
+      }
+
+      .circle-1 {
+        width: 300px;
+        height: 300px;
+        top: 10%;
+        left: 5%;
+        animation-delay: 0s;
+      }
+      .circle-2 {
+        width: 200px;
+        height: 200px;
+        top: 60%;
+        left: 80%;
+        animation-delay: 3s;
+      }
+      .circle-3 {
+        width: 150px;
+        height: 150px;
+        top: 20%;
+        left: 85%;
+        animation-delay: 6s;
+      }
+      .circle-4 {
+        width: 250px;
+        height: 250px;
+        top: 70%;
+        left: 10%;
+        animation-delay: 9s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(180deg);
+        }
+      }
+
+      .signup-container {
+        width: 100%;
+        max-width: 1000px;
+        display: flex;
+        background: var(--dark-light);
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        min-height: 650px;
+      }
+
+      /* Left Side - Visual/Info */
+      .signup-visual {
+        flex: 1;
+        background: var(--gradient);
+        padding: 50px 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .signup-visual::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        opacity: 0.3;
+      }
+
+      .visual-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .visual-icon {
+        font-size: 80px;
+        margin-bottom: 30px;
+        color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+      }
+
+      .visual-title {
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .visual-subtitle {
+        font-size: 18px;
+        opacity: 0.9;
+        margin-bottom: 30px;
+        text-align: center;
+        line-height: 1.6;
+      }
+
+      .benefits-list {
+        list-style: none;
+        margin-top: 30px;
+      }
+
+      .benefits-list li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+      }
+
+      .benefits-list i {
+        color: white;
+        margin-right: 12px;
+        font-size: 18px;
+      }
+
+      /* Right Side - Form */
+      .signup-form-section {
+        flex: 1;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .form-header {
+        margin-bottom: 40px;
+      }
+
+      .form-title {
+        color: var(--primary);
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .form-subtitle {
+        color: var(--gray);
+        font-size: 16px;
+      }
+
+      /* Form Styles */
+      .form-group {
+        margin-bottom: 25px;
+        position: relative;
+      }
+
+      .form-label {
+        color: var(--light);
+        font-weight: 500;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .input-with-icon {
+        position: relative;
+      }
+
+      .input-with-icon i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--gray);
+        font-size: 18px;
+        z-index: 2;
+      }
+
+      .input-with-icon input {
+        padding-left: 50px;
+      }
+
+      .form-control {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        color: var(--light);
+        font-size: 16px;
+        height: 55px;
+        transition: all 0.3s ease;
+      }
+
+      .form-control:focus {
+        background-color: rgba(255, 255, 255, 0.08);
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2);
+        color: var(--light);
+      }
+
+      .password-toggle {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--gray);
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 3;
+      }
+
+      .password-toggle:hover {
+        color: var(--primary);
+      }
+
+      /* Validation Styles */
+      .validation-message {
+        font-size: 14px;
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .valid {
+        color: var(--success);
+      }
+
+      .invalid {
+        color: var(--error);
+      }
+
+      .validation-message i {
+        font-size: 16px;
+      }
+
+      /* Submit Button */
+      .btn-submit {
+        background: var(--gradient);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 18px;
+        font-size: 18px;
+        font-weight: 700;
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 20px;
+        letter-spacing: 1px;
+      }
+
+      .btn-submit:hover {
+        background: linear-gradient(135deg, #e55a00 0%, #ff7a29 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 102, 0, 0.3);
+      }
+
+      .btn-submit:active {
+        transform: translateY(-1px);
+      }
+
+      /* Login Link */
+      .login-link {
+        text-align: center;
+        margin-top: 30px;
+        color: var(--gray);
+        font-size: 16px;
+      }
+
+      .login-link a {
+        color: var(--primary);
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .login-link a:hover {
+        color: #ff8c42;
+        text-decoration: underline;
+      }
+
+      /* Loading Animation */
+      .loading {
+        display: none;
+        width: 25px;
+        height: 25px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Success Message */
+      .success-message {
+        background-color: rgba(40, 167, 69, 0.1);
+        border: 1px solid var(--success);
+        color: var(--success);
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        display: none;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .signup-container {
+          flex-direction: column;
+          max-width: 500px;
         }
 
-        .signup-title {
-            color: #ff6600;
-            font-weight: 700;
-            font-size: larger;
-            text-align: center;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
+        .signup-visual,
+        .signup-form-section {
+          padding: 40px 30px;
         }
 
-        .form-control {
-            background-color: #1c1c1c;
-            border: 1px solid #333;
-            color: #fff;
+        .visual-title {
+          font-size: 36px;
         }
 
-        .form-control:focus {
-            border-color: #ff6600;
-            box-shadow: 0 0 8px rgba(255, 102, 0, 0.5);
-            background-color: #1c1c1c;
-            color: #fff;
+        .form-title {
+          font-size: 32px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .signup-visual,
+        .signup-form-section {
+          padding: 30px 20px;
         }
 
-        .btn-orange {
-            background-color: #ff6600;
-            border: none;
-            font-weight: 600;
-            letter-spacing: 1px;
+        .visual-title {
+          font-size: 30px;
         }
 
-        .btn-orange:hover {
-            background-color: #e65c00;
+        .form-title {
+          font-size: 28px;
         }
+      }
 
-        .form-text a {
-            color: #ff6600;
-            text-decoration: none;
+      /* Animation for form elements */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-        .form-text a:hover {
-            text-decoration: underline;
-        }
+      .form-group,
+      .btn-submit,
+      .login-link {
+        animation: fadeInUp 0.5s ease forwards;
+      }
+
+      .form-group:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .form-group:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .form-group:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .form-group:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .btn-submit {
+        animation-delay: 0.5s;
+      }
+      .login-link {
+        animation-delay: 0.6s;
+      }
     </style>
-</head>
+  </head>
 
-<body class="d-flex justify-content-center align-items-center"
-    style="background: linear-gradient(135deg, #000000, #1a1a1a); min-height: 100vh;">
+  <body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+      <div class="bg-circle circle-1"></div>
+      <div class="bg-circle circle-2"></div>
+      <div class="bg-circle circle-3"></div>
+      <div class="bg-circle circle-4"></div>
+    </div>
 
-    <div class="signup-card">
-        <h2 class="signup-title">JOIN OUR GYM</h2>
+    <!-- Main Container -->
+    <div class="signup-container">
+      <!-- Left Side: Visual/Info -->
+      <div class="signup-visual">
+        <div class="visual-content">
+          <div class="visual-icon">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <h1 class="visual-title">Transform Your Life</h1>
+          <p class="visual-subtitle">
+            Join thousands of members who have transformed their health and
+            fitness with our state-of-the-art facilities and expert trainers.
+          </p>
 
-        <form onsubmit="return handleSignup(event)">
-            <div class="mb-3">
-                <label class="form-label text-white">Full Name</label>
-                <input type="text" class="form-control" placeholder="Enter your full name" required>
+          <ul class="benefits-list">
+            <li><i class="fas fa-check-circle"></i> 24/7 Gym Access</li>
+            <li>
+              <i class="fas fa-check-circle"></i> Personal Training Sessions
+            </li>
+            <li><i class="fas fa-check-circle"></i> Nutrition Planning</li>
+            <li><i class="fas fa-check-circle"></i> Group Classes Included</li>
+            <li><i class="fas fa-check-circle"></i> Progress Tracking App</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Side: Form -->
+      <div class="signup-form-section">
+        <div class="form-header">
+          <h2 class="form-title">Create Account</h2>
+          <p class="form-subtitle">Join our fitness community today</p>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+          <i class="fas fa-check-circle"></i>
+          <span>Signup successful! Redirecting...</span>
+        </div>
+
+        <form id="signupForm">
+          <!-- Name Field -->
+          <div class="form-group">
+            <label class="form-label" for="name">Full Name</label>
+            <div class="input-with-icon">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Enter your full name"
+                required
+              />
             </div>
-
-            <div class="mb-3">
-                <label class="form-label text-white">Email</label>
-                <input type="email" class="form-control" placeholder="Enter your email" required>
+            <div class="validation-message" id="nameValidation">
+              <i class="fas fa-info-circle"></i>
+              <span>Please enter your full name</span>
             </div>
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label text-white">Password</label>
-                <input type="password" class="form-control" placeholder="Create a password" required>
+          <!-- Email Field -->
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your email"
+                required
+              />
             </div>
-
-            <div class="mb-3">
-                <label class="form-label text-white">Confirm Password</label>
-                <input type="password" class="form-control" placeholder="Confirm password" required>
+            <div class="validation-message" id="emailValidation">
+              <i class="fas fa-info-circle"></i>
+              <span>Please enter a valid email address</span>
             </div>
+          </div>
 
-            <div class="d-grid mt-3">
-                <button type="submit" class="btn btn-orange btn-lg">SIGN UP</button>
+          <!-- Password Field -->
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="Create a strong password"
+                required
+              />
+              <button type="button" class="password-toggle" id="togglePassword">
+                <i class="fas fa-eye"></i>
+              </button>
             </div>
+            <div class="validation-message" id="passwordValidation">
+              <i class="fas fa-info-circle"></i>
+              <span>Password must be at least 8 characters</span>
+            </div>
+          </div>
 
-            <p class="form-text text-center mt-3 text-light">
-                Already a member? <a href="login.html">Login</a>
-            </p>
+          <!-- Confirm Password Field -->
+          <div class="form-group">
+            <label class="form-label" for="confirmPassword"
+              >Confirm Password</label
+            >
+            <div class="input-with-icon">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="confirmPassword"
+                class="form-control"
+                placeholder="Confirm your password"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                id="toggleConfirmPassword"
+              >
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <div class="validation-message" id="confirmPasswordValidation">
+              <i class="fas fa-info-circle"></i>
+              <span>Passwords must match</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span>CREATE ACCOUNT</span>
+            <div class="loading" id="loadingSpinner"></div>
+          </button>
         </form>
+
+        <!-- Login Link -->
+        <div class="login-link">
+          Already have an account? <a href="login.html">Log in here</a>
+        </div>
+      </div>
     </div>
 
     <script>
-        function handleSignup(event) {
-            event.preventDefault();
-            window.location.href = "index.html";
+      document.addEventListener("DOMContentLoaded", function () {
+        // DOM Elements
+        const signupForm = document.getElementById("signupForm");
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirmPassword");
+        const togglePasswordBtn = document.getElementById("togglePassword");
+        const toggleConfirmPasswordBtn = document.getElementById(
+          "toggleConfirmPassword",
+        );
+        const submitBtn = document.getElementById("submitBtn");
+        const loadingSpinner = document.getElementById("loadingSpinner");
+        const successMessage = document.getElementById("successMessage");
+
+        // Validation Elements
+        const nameValidation = document.getElementById("nameValidation");
+        const emailValidation = document.getElementById("emailValidation");
+        const passwordValidation =
+          document.getElementById("passwordValidation");
+        const confirmPasswordValidation = document.getElementById(
+          "confirmPasswordValidation",
+        );
+
+        // Real-time validation functions
+        function validateName() {
+          const name = nameInput.value.trim();
+          const isValid = name.length >= 2;
+
+          if (isValid) {
+            nameValidation.innerHTML =
+              '<i class="fas fa-check-circle valid"></i><span class="valid">Name looks good!</span>';
+          } else {
+            nameValidation.innerHTML =
+              '<i class="fas fa-exclamation-circle invalid"></i><span class="invalid">Name must be at least 2 characters</span>';
+          }
+
+          return isValid;
         }
-        function handleSignup(event) {
-            event.preventDefault();
 
-            const name = document.querySelector('input[type="text"]').value;
-            const email = document.querySelector('input[type="email"]').value;
-            const phone = document.querySelector('input[type="tel"]').value;
+        function validateEmail() {
+          const email = emailInput.value.trim();
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const isValid = emailRegex.test(email);
 
+          if (isValid) {
+            emailValidation.innerHTML =
+              '<i class="fas fa-check-circle valid"></i><span class="valid">Valid email address</span>';
+          } else {
+            emailValidation.innerHTML =
+              '<i class="fas fa-exclamation-circle invalid"></i><span class="invalid">Please enter a valid email</span>';
+          }
+
+          return isValid;
+        }
+
+        function validatePassword() {
+          const password = passwordInput.value;
+          const isValid = password.length >= 8;
+
+          if (isValid) {
+            passwordValidation.innerHTML =
+              '<i class="fas fa-check-circle valid"></i><span class="valid">Password strength: Good</span>';
+          } else {
+            passwordValidation.innerHTML =
+              '<i class="fas fa-exclamation-circle invalid"></i><span class="invalid">Password must be at least 8 characters</span>';
+          }
+
+          return isValid;
+        }
+
+        function validateConfirmPassword() {
+          const password = passwordInput.value;
+          const confirmPassword = confirmPasswordInput.value;
+          const isValid = password === confirmPassword && password.length > 0;
+
+          if (isValid) {
+            confirmPasswordValidation.innerHTML =
+              '<i class="fas fa-check-circle valid"></i><span class="valid">Passwords match</span>';
+          } else {
+            confirmPasswordValidation.innerHTML =
+              '<i class="fas fa-exclamation-circle invalid"></i><span class="invalid">Passwords do not match</span>';
+          }
+
+          return isValid;
+        }
+
+        // Toggle password visibility
+        togglePasswordBtn.addEventListener("click", function () {
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordInput.setAttribute("type", type);
+
+          // Toggle eye icon
+          const icon = this.querySelector("i");
+          if (type === "text") {
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+          } else {
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+          }
+        });
+
+        toggleConfirmPasswordBtn.addEventListener("click", function () {
+          const type =
+            confirmPasswordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          confirmPasswordInput.setAttribute("type", type);
+
+          // Toggle eye icon
+          const icon = this.querySelector("i");
+          if (type === "text") {
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+          } else {
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+          }
+        });
+
+        // Real-time validation on input
+        nameInput.addEventListener("input", validateName);
+        emailInput.addEventListener("input", validateEmail);
+        passwordInput.addEventListener("input", function () {
+          validatePassword();
+          validateConfirmPassword(); // Also validate confirm password when password changes
+        });
+        confirmPasswordInput.addEventListener("input", validateConfirmPassword);
+
+        // Form submission
+        signupForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Validate all fields
+          const isNameValid = validateName();
+          const isEmailValid = validateEmail();
+          const isPasswordValid = validatePassword();
+          const isConfirmPasswordValid = validateConfirmPassword();
+
+          if (
+            isNameValid &&
+            isEmailValid &&
+            isPasswordValid &&
+            isConfirmPasswordValid
+          ) {
+            // Show loading state
+            submitBtn.disabled = true;
+            loadingSpinner.style.display = "block";
+            submitBtn.querySelector("span").textContent = "Creating Account...";
+
+            // Get form values
             const user = {
-                name: name,
-                email: email,
-                phone: phone
+              name: nameInput.value.trim(),
+              email: emailInput.value.trim(),
+              password: passwordInput.value,
+              signupDate: new Date().toISOString(),
             };
 
-            localStorage.setItem("gymUser", JSON.stringify(user));
-            localStorage.setItem("isLoggedIn", "true");
+            // Simulate API call delay
+            setTimeout(function () {
+              // Save user to localStorage
+              localStorage.setItem("gymUser", JSON.stringify(user));
+              localStorage.setItem("isLoggedIn", "true");
 
-            window.location.href = "index.html";
+              // Show success message
+              successMessage.style.display = "flex";
+
+              // Hide form
+              signupForm.style.opacity = "0.5";
+              signupForm.style.pointerEvents = "none";
+
+              // Redirect after delay
+              setTimeout(function () {
+                alert("Signup Successful! Welcome to FitLife Gym.");
+                window.location.href = "index.html";
+              }, 1500);
+            }, 1500); // Simulate network delay
+          } else {
+            // Shake form to indicate error
+            signupForm.classList.add("shake");
+            setTimeout(() => {
+              signupForm.classList.remove("shake");
+            }, 500);
+
+            // Scroll to first error
+            if (!isNameValid) nameInput.focus();
+            else if (!isEmailValid) emailInput.focus();
+            else if (!isPasswordValid) passwordInput.focus();
+            else if (!isConfirmPasswordValid) confirmPasswordInput.focus();
+          }
+        });
+
+        // Add shake animation CSS
+        const style = document.createElement("style");
+        style.textContent = `
+          @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+          }
+          
+          .shake {
+            animation: shake 0.5s ease-in-out;
+          }
+        `;
+        document.head.appendChild(style);
+
+        // Check if user is already logged in
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+        if (isLoggedIn === "true") {
+          // If already logged in, redirect to profile
+          window.location.href = "index.html";
         }
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
